@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 
 namespace ConsoleApp3
 {
@@ -34,6 +30,10 @@ namespace ConsoleApp3
     public class UnitBuilder : IBuilder
     {
         private Unit unit;
+        public UnitBuilder()
+        {
+            this.unit = new Unit();
+        }
 
         public IBuilder SetHealth(int health)
         {
@@ -123,6 +123,7 @@ namespace ConsoleApp3
             Console.WriteLine($"armorType: {armorType}");
             Console.WriteLine($"shield: {shield}");
             Console.WriteLine($"horse: {horse}");
+            Console.WriteLine();
         }
     }
     public abstract class AbstractFactory : Unit
